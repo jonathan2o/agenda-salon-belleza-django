@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cita confirmada</title>
+</head>
+<body>
+
+    <h1>✅ Cita registrada</h1>
+
+    <p><strong>Nombre:</strong> {{ cita.nombre }}</p>
+    <p><strong>Fecha:</strong> {{ cita.fecha }}</p>
+    <p><strong>Hora:</strong> {{ cita.hora }}</p>
+    <p><strong>Código:</strong> {{ cita.codigo }}</p>
+
+    <p>Guarda este código para consultar o cancelar tu cita.</p>
+
+    <a href="{% url 'inicio' %}">Volver al inicio</a>
+
+</body>
+</html>
+

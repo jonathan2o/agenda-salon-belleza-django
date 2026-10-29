@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Consultar cita</title>
+</head>
+<body>
+
+    <h1>Consultar cita</h1>
+
+    <form method="post">
+        {% csrf_token %}
+        <input type="text" name="codigo" placeholder="Código de la cita">
+        <button type="submit">Consultar</button>
+    </form>
+
+    <!-- 👇 AQUÍ VA EL CÓDIGO -->
+    {% if cita %}
+        <p><strong>Nombre:</strong> {{ cita.nombre }}</p>
+        <p><strong>Fecha:</strong> {{ cita.fecha }}</p>
+        <p><strong>Hora:</strong> {{ cita.hora }}</p>
+    {% elif cita == None %}
+        <p>No se encontró ninguna cita.</p>
+    {% endif %}
+
+</body>
+</html>

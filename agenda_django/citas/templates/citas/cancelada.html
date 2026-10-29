@@ -1,0 +1,9 @@
+<h1>Cita cancelada</h1>
+
+{% if error %}
+    <p>No se encontró la cita.</p>
+{% else %}
+    <p>La cita con código <strong>{{ cita.codigo }}</strong> fue cancelada.</p>
+{% endif %}
+
+<a href="{% url 'inicio' %}">Volver al inicio</a>
